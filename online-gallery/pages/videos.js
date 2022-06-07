@@ -1,16 +1,13 @@
+import SearchComponent from "../component/SearchComponent";
 import VideosList from "../component/VideosList";
 import VideosAPICalls from '../services/VideosAPICalls'
+import classes from "../styles/Page.module.css";
 
 function VideosPage(props){
     return (
-        <div>
-            <div>
-                <form>
-                    <input type="text"/>
-                    <button>Search</button>
-                </form>
-            </div>
-            <VideosList videos = {props.videos}/>
+        <div className={classes.page}>
+            <SearchComponent/>
+            <VideosList className={classes.content} videos = {props.videos}/>
         </div>
     )
 }
@@ -25,6 +22,6 @@ export async function getStaticProps(){
       }
   }
 }
-
+ 
 
 export default VideosPage;
