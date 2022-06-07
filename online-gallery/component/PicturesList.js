@@ -5,7 +5,6 @@ import classes from "../styles/List.module.css";
 function PicturesList(props){
 
     const pictures = props.pictures;
-    console.log(pictures)
     return (
         <div className={classes.container}>
             {pictures.map((picture)=>{

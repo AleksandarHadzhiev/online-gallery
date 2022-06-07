@@ -4,7 +4,6 @@ import classes from "../styles/List.module.css";
 function VideosList(props){
 
     const videos = props.videos;
-    console.log(videos)
     return (
         <div className={classes.container}>
             {videos.map((video)=>{

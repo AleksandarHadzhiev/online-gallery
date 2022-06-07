@@ -5,10 +5,10 @@ import { FaUser } from "react-icons/fa";
 function VideoItem(props){
 
     const video = props.video;
-    console.log(video.url);
+
     return (
         <div  className={classes.card}>
-            <ReactPlayer width={"520px"} height={"520px"} url="https://www.pexels.com/video/a-cat-on-the-floor-looking-curiously-at-the-camera-4147614/"/>
+            <ReactPlayer width={"100%"} controls={true} url={video.video_files[0].link}/>
             <div className={classes.userInformation}>
                 <p>{video.user.name}</p>
                 <a href={video.user.url}><FaUser/>Profile</a>
