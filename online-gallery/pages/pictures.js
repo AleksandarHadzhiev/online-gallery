@@ -7,7 +7,9 @@ function PicturesPage(props){
     return (
         <div className={classes.page}>
             <SearchComponent/>
-            <PicturesList className={classes.content} pictures = {props.images}/>
+            <div className={classes.content}>
+                <PicturesList className={classes.content} pictures = {props.images}/>
+            </div>
         </div>
     )
 }

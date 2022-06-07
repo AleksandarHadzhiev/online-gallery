@@ -1,3 +1,5 @@
+import classes from "../styles/PictureItem.module.css";
+
 
 function PictureItem(props){
 

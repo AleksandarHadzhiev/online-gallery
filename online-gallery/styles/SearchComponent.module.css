@@ -4,7 +4,9 @@
     width: 40%;
     height: 4rem;
     background-color: white;
-    border-radius: 1.5rem;
+    margin-bottom: 3.5rem;
+    margin-top: 2rem;
+    border-bottom:solid 2px black ;
 }
 .search{
     display: flex;

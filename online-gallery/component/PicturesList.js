@@ -1,11 +1,13 @@
 import PictureItem from "./PictureItem";
+import classes from "../styles/List.module.css";
+
 
 function PicturesList(props){
 
     const pictures = props.pictures;
     console.log(pictures)
     return (
-        <div>
+        <div className={classes.container}>
             {pictures.map((picture)=>{
             return <PictureItem key={picture.id} picture={picture}/>})}
 

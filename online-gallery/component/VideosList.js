@@ -8,7 +8,6 @@ function VideosList(props){
         <div>
             {videos.map((video)=>{
             return <VideoItem key={video.id} video={video}/>})}
-
         </div>
     )
 }

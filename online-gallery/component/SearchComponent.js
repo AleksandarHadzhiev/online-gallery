@@ -5,7 +5,7 @@ function SearchComponent(){
     return (
         <div className={classes.top}>
             <form className={classes.search}>
-                <input placeholder="Search for a photo...." type="text"/>
+                <input placeholder="Search..." type="text"/>
                 <button><FaSearch/></button>
             </form>
         </div>
