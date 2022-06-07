@@ -5,6 +5,12 @@ import PicturesAPICalls from "../services/PicturesAPICalls";
 function PicturesPage(props){
     return (
         <div>
+            <div>
+                <form>
+                    <input type="text"/>
+                    <button>Search</button>
+                </form>
+            </div>
             <PicturesList pictures = {props.images}/>
         </div>
     )
