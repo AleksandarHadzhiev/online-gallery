@@ -8,21 +8,21 @@ import VideosAPICalls from '../services/VideosAPICalls'
 export default function Home() {
 
   useEffect(()=>{
-    // PicturesAPICalls.getSearchedPhoto("hamster").then(
-    //   (res)=>{
-    //     console.log(res.data);
-    //   }
-    // ).catch(()=>{
-    //   console.error();
-    // })
-
-    VideosAPICalls.getPopularVideos().then(
+    PicturesAPICalls.getSearchedPhoto("hamster").then(
       (res)=>{
         console.log(res.data);
       }
     ).catch(()=>{
       console.error();
     })
+
+    // VideosAPICalls.getPopularVideos().then(
+    //   (res)=>{
+    //     console.log(res.data);
+    //   }
+    // ).catch(()=>{
+    //   console.error();
+    // })
   },[])
 
   return (
