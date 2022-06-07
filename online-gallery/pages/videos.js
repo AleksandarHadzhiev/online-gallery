@@ -7,14 +7,16 @@ function VideosPage(props){
     return (
         <div className={classes.page}>
             <SearchComponent/>
-            <VideosList className={classes.content} videos = {props.videos}/>
+            <div className={classes.content}>
+                <VideosList className={classes.content} videos = {props.videos}/>
+            </div>
         </div>
     )
 }
 
 export async function getStaticProps(){
   // fetch data from API
-  const res = await VideosAPICalls.getPopularVideos();
+  const res = await VideosAPICalls.getSearchedVideo("cat");
 
   return {
       props:{
