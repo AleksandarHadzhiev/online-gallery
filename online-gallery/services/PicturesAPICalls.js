@@ -7,7 +7,7 @@ const header = {
     Authorization: API_KEY
 }
 
-class PixelAPICalls{
+class PicturesAPICalls{
     getCuratedPhotos(){
         return axios.get(BASE_URL+"curated?page=2&per_page=40",{headers:header});
     }
@@ -17,4 +17,4 @@ class PixelAPICalls{
     }
 }
 
-export default new PixelAPICalls();
+export default new PicturesAPICalls();

@@ -1,15 +1,22 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import PixelAPICalls from '../services/PixelAPICalls'
+import PicturesAPICalls from '../services/PicturesAPICalls'
 import { useEffect, useState } from 'react'
+import VideosAPICalls from '../services/VideosAPICalls'
 
 export default function Home() {
 
-  const [pictures, setPictures] = useState(null);
-
   useEffect(()=>{
-    PixelAPICalls.getSearchedPhoto("hamster").then(
+    // PicturesAPICalls.getSearchedPhoto("hamster").then(
+    //   (res)=>{
+    //     console.log(res.data);
+    //   }
+    // ).catch(()=>{
+    //   console.error();
+    // })
+
+    VideosAPICalls.getPopularVideos().then(
       (res)=>{
         console.log(res.data);
       }
