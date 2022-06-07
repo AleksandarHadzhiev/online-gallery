@@ -1,16 +1,16 @@
 import classes from "../styles/PictureItem.module.css";
-
+import { FaUser } from "react-icons/fa";
 
 function PictureItem(props){
 
     const picture = props.picture;
     console.log(picture);
     return (
-        <div>
+        <div className={classes.card}>
             <img src={picture.src.portrait} alt={picture.alt}/>
-            <div>
+            <div className={classes.userInformation}>
                 <p>{picture.photographer}</p>
-                <a href={picture.photographer_url}>Link to photograpger page</a>
+                <a href={picture.photographer_url}><FaUser/>Profile</a>
             </div>
         </div>
     )
