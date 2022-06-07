@@ -1,28 +1,28 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import PicturesAPICalls from '../services/PicturesAPICalls'
-import { useEffect, useState } from 'react'
 import VideosAPICalls from '../services/VideosAPICalls'
+import { useEffect, useState } from 'react'
+
 
 export default function Home() {
 
   useEffect(()=>{
-    PicturesAPICalls.getSearchedPhoto("hamster").then(
-      (res)=>{
-        console.log(res.data);
-      }
-    ).catch(()=>{
-      console.error();
-    })
-
-    // VideosAPICalls.getPopularVideos().then(
+    // PicturesAPICalls.getSearchedPhoto("hamster").then(
     //   (res)=>{
     //     console.log(res.data);
     //   }
     // ).catch(()=>{
     //   console.error();
     // })
+
+    VideosAPICalls.getPopularVideos().then(
+      (res)=>{
+        console.log(res.data);
+      }
+    ).catch(()=>{
+      console.error();
+    })
   },[])
 
   return (
