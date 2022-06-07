@@ -1,11 +1,14 @@
 
 function PictureItem(props){
+
+    const picture = props.picture;
+    console.log(picture);
     return (
         <div>
-            <img src="" alt=""/>
+            <img src={picture.src.portrait} alt={picture.alt}/>
             <div>
-                <p>Photographer name</p>
-                <a href="">Link to photograpger page</a>
+                <p>{picture.photographer}</p>
+                <a href={picture.photographer_url}>Link to photograpger page</a>
             </div>
         </div>
     )
