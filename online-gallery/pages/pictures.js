@@ -1,17 +1,13 @@
 import PicturesList from "../component/PicturesList";
 import PicturesAPICalls from "../services/PicturesAPICalls";
-
+import classes from "../styles/Page.module.css";
+import SearchComponent from "../component/SearchComponent";
 
 function PicturesPage(props){
     return (
-        <div>
-            <div>
-                <form>
-                    <input type="text"/>
-                    <button>Search</button>
-                </form>
-            </div>
-            <PicturesList pictures = {props.images}/>
+        <div className={classes.page}>
+            <SearchComponent/>
+            <PicturesList className={classes.content} pictures = {props.images}/>
         </div>
     )
 }

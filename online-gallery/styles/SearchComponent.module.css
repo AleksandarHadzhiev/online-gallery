@@ -1,0 +1,33 @@
+.top{
+    align-self: center;
+    display: flex;
+    width: 40%;
+    height: 4rem;
+    background-color: white;
+    border-radius: 1.5rem;
+}
+.search{
+    display: flex;
+    width: 100%; 
+    background: none;
+    justify-content: space-between;
+}
+.search input{
+    border: none;
+    background: none;
+    width: 70%;
+    font-size: 24px;
+}
+.search button{
+    border: none;
+    background: none;
+    color: black;
+    font-size: 24px;
+}
+.search input:focus{
+    outline: none;
+}
+.content{
+    height: 100%;
+    overflow-y: auto;
+}
