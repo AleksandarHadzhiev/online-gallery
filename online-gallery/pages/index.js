@@ -1,30 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import VideosAPICalls from '../services/VideosAPICalls'
-import { useEffect, useState } from 'react'
-import PicturesAPICalls from '../services/PicturesAPICalls'
 
 export default function Home() {
-
-  useEffect(()=>{
-    PicturesAPICalls.getSearchedPhoto("hamster").then(
-      (res)=>{
-        console.log(res.data);
-      }
-    ).catch(()=>{
-      console.error();
-    })
-
-    // VideosAPICalls.getPopularVideos().then(
-    //   (res)=>{
-    //     console.log(res.data);
-    //   }
-    // ).catch(()=>{
-    //   console.error();
-    // })
-  },[])
-
   return (
     <div className={styles.container}>
       <Head>
@@ -89,28 +67,3 @@ export default function Home() {
     </div>
   )
 }
-
-// export async function getStaticPaths() {
-//   return {
-//       fallback: false,
-//       paths:[
-//           { params: {
-//               meetupID: '1',
-//           } },
-//           { params: {
-//               meetupID: '2',
-//           } }
-//       ]
-//   }
-// }
-
-// export async function getStaticProps(){
-//   // fetch data from API
-//   const res = await PixelAPICalls.getCuratedPhotos();
-
-//   return {
-//       props:{
-//           images:res.data
-//       }
-//   }
-// }

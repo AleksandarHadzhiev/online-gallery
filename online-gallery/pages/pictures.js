@@ -10,12 +10,10 @@ function PicturesPage(props){
  
     async function getPhotosFor(query){
         const res = await PicturesAPICalls.getSearchedPhoto(query);
-        console.log(quer);
-        if(res.statusText==="OK"){
-            console.log(res.data.photos);
+        if(query.length>1){
             setPhotos(res.data.photos);
         }
-        else if(res.code=="ERR_BAD_REQUEST"){
+        else if(query.length<=1){
             setPhotos(null);
         }
         

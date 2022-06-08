@@ -1,3 +1,4 @@
+import { useState } from "react";
 import SearchComponent from "../component/SearchComponent";
 import VideosList from "../component/VideosList";
 import VideosAPICalls from '../services/VideosAPICalls'
@@ -5,9 +6,16 @@ import classes from "../styles/Page.module.css";
 
 function VideosPage(props){
 
+    const [videos, setVideos] = useState(null);
+
     async function getVideosFor(query){
         const res = await VideosAPICalls.getSearchedVideo(query);
-        console.log(res.data.videos);
+        if(query.length>1){
+            setVideos(res.data.videos);
+        }
+        else if(query.length<=1){
+            setVideos(null);
+        }
     }
 
     return (
@@ -16,7 +24,7 @@ function VideosPage(props){
                 getVideosFor(query);
             }}/>
             <div className={classes.content}>
-                <VideosList className={classes.content} videos = {props.videos}/>
+                <VideosList className={classes.content} videos = {videos !=null ? videos : props.videos}/>
             </div>
         </div>
     )
