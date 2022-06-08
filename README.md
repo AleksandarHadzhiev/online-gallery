@@ -1,4 +1,4 @@
-# online-gallery in Progress
+# Online Gallery - in Progress
 Project with a goal to learn to use next.js and python.
 
 ## General Information 
