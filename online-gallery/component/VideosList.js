@@ -1,14 +1,13 @@
 import VideoItem from "./VideoItem";
+import classes from "../styles/List.module.css";
 
 function VideosList(props){
 
     const videos = props.videos;
-    console.log(videos)
     return (
-        <div>
+        <div className={classes.container}>
             {videos.map((video)=>{
             return <VideoItem key={video.id} video={video}/>})}
-
         </div>
     )
 }
