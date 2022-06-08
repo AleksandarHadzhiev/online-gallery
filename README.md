@@ -1,5 +1,5 @@
 # online-gallery -in Progress
-Project with a goal to learn to use next.js
+Project with a goal to learn to use next.js and python.
 
 ## General Information 
 
@@ -18,13 +18,13 @@ The app is currently only for regular users without sign in and sign up function
 The goals for the app are to make use of Python for backend API and allow registration of the users. Also, the registrated users will be able to add videos or photos to list of favourites. Additionally, the user will be able to upload personal images to the site, outside of the Pexels API. The images will later on be displayed together with the ones from the Pexels API.
 
 ### Homepage
-![изображение](https://user-images.githubusercontent.com/105558464/172572451-18418eb9-791b-4858-b5f5-b6e919d77d9f.png)
+![изображение](https://user-images.githubusercontent.com/105558464/172574100-20028c9c-1e0a-42df-8090-d32a389e4361.png)
 
 ### Videos
-![изображение](https://user-images.githubusercontent.com/105558464/172572399-d8176b60-fe1e-4866-90c3-94d8325107d5.png)
+![изображение](https://user-images.githubusercontent.com/105558464/172574251-1cf89648-82e3-47e2-aba6-03bb3c355f88.png)
 
 ### Photos
-![изображение](https://user-images.githubusercontent.com/105558464/172572105-ed1f7e05-4dae-48f1-a95b-3ac76d2106d0.png)
+![изображение](https://user-images.githubusercontent.com/105558464/172574172-44b7145a-31a8-442e-adde-4482f0ce4601.png)
 
 
 ## Starting the app
